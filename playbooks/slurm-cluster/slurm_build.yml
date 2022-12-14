@@ -5,7 +5,7 @@
     - name: facts
 
 # Build slurm first on all nodes
-- hosts: slurm-cluster
+- hosts: sc1q
   become: yes
   tasks:
     - name: build slurm on all nodes
@@ -14,7 +14,7 @@
         tasks_from: build
 
 # Configure slurm.conf on all nodes
-- hosts: slurm-cluster
+- hosts: sc1q
   become: yes
   roles:
     - name: slurm
