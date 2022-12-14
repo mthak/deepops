@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: sc1q
   become: yes
   roles:
     - name: facts
